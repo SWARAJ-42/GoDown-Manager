@@ -28,7 +28,6 @@ interface Item {
 }
 
 export default function ProfilePage() {
-  const [searchQuery, setSearchQuery] = useState("");
   const [loggedIn, setLoggedIn] = useState(true);
   const [selectedItem, setSelectedItem] = useState<Item | null>(null);
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -37,11 +36,6 @@ export default function ProfilePage() {
   const handleItemSelection = (item: Item) => {
     setSelectedItem(item);
     if (isMobile) setSidebarOpen(false);
-  };
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Searching for:", searchQuery);
   };
 
   const router = useRouter();
@@ -89,22 +83,6 @@ export default function ProfilePage() {
                         lg:translate-x-0 transition-transform duration-300 ease-in-out
                         bg-gray-800/80 backdrop-blur-md text-white p-8 flex flex-col 
                         ${isMobile ? 'w-3/4 rounded-xl' : 'rounded-l-xl'}`}>
-          <div className="mb-6 mt-12 lg:mt-0">
-            <h2 className="text-2xl font-bold mb-4">Search here</h2>
-            <form onSubmit={handleSearch} className="flex flex-col gap-2">
-              <Input
-                type="text"
-                placeholder="Search..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="bg-gray-700 text-white placeholder-gray-400 border-gray-600"
-              />
-              <Button type="submit" className="w-full">
-                <Search className="h-4 w-4 mr-2" />
-                Search
-              </Button>
-            </form>
-          </div>
           <GodownHierarchy onItemSelect={handleItemSelection} />
         </div>
 
