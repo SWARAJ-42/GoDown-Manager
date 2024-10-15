@@ -115,7 +115,7 @@ export default function ProfilePage() {
             <div className="flex items-center mb-4">
               <User className="h-8 w-8 mr-4 text-gray-600" />
               <h1 className="text-2xl font-bold text-gray-800">
-                Welcome, {data.username}
+                Welcome, {data?.username}
               </h1>
             </div>
           </div>
