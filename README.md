@@ -5,7 +5,16 @@ This project is developed as part of the InterIIT Tech Meet 13.0 Development Tea
 ## 🚀 Deployment
 
 The application is deployed and accessible at the following link:
-[Live Deployment](#)
+[Live Deployment](https://godown-manager-1uwx.vercel.app/login)
+- Please use VPN or MobileData, mongoDB doesnot connect in campus networks
+- Default email and password
+  - `biswalswaraj88@gmail.com` and `1234567`
+- Feel free to create new users :)
+
+## 🎥 Demo Video
+
+Check out the demonstration of the project in the following video link:
+[Project Demo](https://youtu.be/j4heTcFvC_g)
 
 ## ✅ Checklist
 
@@ -192,14 +201,8 @@ The project uses both **JSON files** and **MongoDB** for data storage.
 ## 📝 Additional Notes
 
 - Ensure your MongoDB URI is properly configured in the `.env.local` file.
+- Also add a `JWT_SECRET_TOKEN=` parameter with value in `.env.local`
 - The simplified Docker setup (`sudo docker-compose build` and `sudo docker-compose up`) allows you to efficiently run both production and development environments.
-
-
-## 🎥 Demo Video
-
-Check out the demonstration of the project in the following video link:
-
-[Project Demo](#)
 
 ## 📅 Deadline
 
