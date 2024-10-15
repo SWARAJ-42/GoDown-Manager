@@ -97,7 +97,6 @@ Check out the demonstration of the project in the following video link:
 ├── tailwind.config.ts
 └── tsconfig.json
 ```
-Here’s the corrected and refined markdown for the `README` file with appropriate adjustments:
 
 # Project Documentation
 
@@ -106,7 +105,7 @@ Here’s the corrected and refined markdown for the `README` file with appropria
 ### Prerequisites
 
 Ensure the following are installed on your system:
-- **Node.js** (v16.x or higher)
+- **Node.js** (v18.x or higher)
 - **npm** or **pnpm** (preferred)
 - **Docker** (for containerized setup)
 
