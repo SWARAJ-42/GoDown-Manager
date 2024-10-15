@@ -50,10 +50,11 @@ export default function ProfilePage() {
   const getUserDetails = async () => {
     try {
       const res = await axios.get("/api/user/userdetails");
-      setLoggedIn(true); 
       setData(res.data.data);
+      setLoggedIn(true); 
     } catch (error: any) {
       console.log("User not logged in");
+      router.push('/login')
       setLoggedIn(false);
     }
   };
@@ -89,7 +90,7 @@ export default function ProfilePage() {
                         bg-gray-800/80 backdrop-blur-md text-white p-8 flex flex-col 
                         ${isMobile ? 'w-3/4 rounded-xl' : 'rounded-l-xl'}`}>
           <div className="mb-6 mt-12 lg:mt-0">
-            <h2 className="text-2xl font-bold mb-4">Search</h2>
+            <h2 className="text-2xl font-bold mb-4">Search here</h2>
             <form onSubmit={handleSearch} className="flex flex-col gap-2">
               <Input
                 type="text"

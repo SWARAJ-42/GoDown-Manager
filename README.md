@@ -1,36 +1,151 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📦 Godown Management Tree View Application
 
-## Getting Started
+This project is developed as part of the InterIIT Tech Meet 13.0 Development Team Selection Task. It focuses on building a warehouse management system that displays the hierarchy of godowns (warehouses), sub-locations, and items stored, along with item details.
 
-First, run the development server:
+## 🌟 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Tree Structure:**
+  - A hierarchical tree view representing godown locations and sub-locations.
+  - Allows users to expand and collapse nodes to explore nested locations and items.
+- **Item Details:**
+  - Displays the detailed attributes of selected items on the main page, including quantity, price, and more.
+- **Basic Authentication:**
+  - A login page with simple email domain-based validation for access.
+- **API Endpoints:**
+  - REST API to handle the backend data for godowns, sub-locations, and items.
+- **Dockerized:**
+  - Docker setup for the entire system to streamline deployment.
+
+## ✅ Checklist
+
+- [x] **Frontend:**
+  - [x] Tree structure with godowns, sub-locations, and items.
+  - [x] Expand/collapse functionality for the tree view.
+  - [x] Display item details on selection.
+  - [x] User-friendly UI for selecting godown items.
+- [x] **Backend:**
+  - [x] REST API to expose endpoints for godowns and items.
+  - [x] JSON structure for godown locations and items.
+  - [x] API documentation included.
+- [x] **Authentication:**
+  - [x] Basic login page with JWT tokenization.
+- [x] **Dockerization:**
+  - [x] Full Docker setup to containerize the application.
+- [ ] **Search Functionality:** (Excluded as per the task requirements)
+- [x] **Deployment:**
+  - [x] Deployed version of the application. (Link below)
+
+## 📂 Project Structure
+
+```
+.
+├── backend/
+│   ├── app.py                 # Flask app for API
+│   ├── models.py              # Data models for godowns and items
+│   ├── routes.py              # API routes for CRUD operations
+│   ├── Dockerfile             # Docker setup for backend
+│   └── requirements.txt       # Python dependencies
+├── frontend/
+│   ├── src/
+│   │   ├── components/        # React components for UI
+│   │   ├── App.js             # Main React component
+│   │   └── index.js           # Entry point for frontend
+│   ├── public/                # Static assets and HTML
+│   ├── Dockerfile             # Docker setup for frontend
+│   └── package.json           # JavaScript dependencies
+├── docker-compose.yml         # Docker Compose for managing multi-container application
+└── README.md                  # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The application is deployed and accessible at the following link:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+[Live Deployment](#)
 
-## Learn More
+## 🔧 Setup Instructions
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Ensure you have the following installed on your system:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Docker
+- Node.js
+- Python 3.x
 
-## Deploy on Vercel
+### Local Development
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Clone the repository:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+git clone https://github.com/your-username/godown-management.git
+cd godown-management
+```
+
+2. Backend Setup:
+
+```bash
+cd backend
+pip install -r requirements.txt
+python app.py
+```
+
+This will start the Flask backend server on `http://localhost:5000`.
+
+3. Frontend Setup:
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+This will start the React frontend server on `http://localhost:3000`.
+
+### Docker Setup
+
+To run the application using Docker:
+
+1. Build and run the containers:
+
+```bash
+docker-compose up --build
+```
+
+The application should now be available on the designated port in your Docker setup.
+
+## 🛠 API Endpoints
+
+| HTTP Method | Endpoint | Description |
+|-------------|----------|-------------|
+| GET | `/api/godowns` | Retrieves all godown locations. |
+| GET | `/api/items` | Retrieves all items in godowns. |
+| POST | `/api/godowns` | Adds a new godown. |
+| POST | `/api/items` | Adds a new item. |
+| PUT | `/api/godowns/:id` | Updates a godown by ID. |
+| PUT | `/api/items/:id` | Updates an item by ID. |
+| DELETE | `/api/godowns/:id` | Deletes a godown by ID. |
+| DELETE | `/api/items/:id` | Deletes an item by ID. |
+
+## 📊 Database
+
+The application uses a JSON file structure or any database of your choice like SQLite, PostgreSQL, or MongoDB.
+
+- Locations table/collection:
+  - id, name, parent_godown
+- Items table/collection:
+  - item_id, name, quantity, category, status, price, brand, godown_id
+
+## 🎥 Demo Video
+
+Check out the demonstration of the project in the following video link:
+
+[Project Demo](#)
+
+## 📅 Deadline
+
+The final submission deadline for this project is 12/10/2024.
+
+## 👨‍💻 Developers
+
+[Your Name](https://github.com/your-username)

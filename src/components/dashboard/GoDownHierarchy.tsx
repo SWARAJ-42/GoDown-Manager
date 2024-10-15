@@ -93,7 +93,7 @@ const GodownHierarchy: React.FC<GodownHierarchyProps> = ({ onItemSelect }) => {
   const renderNode = (node: GodownNode, level: number = 0) => {
     const isExpanded = expandedNodes.has(node.id);
     return (
-      <div key={node.id} className={`ml-${level * 4}`}>
+      <div key={node.id} style={{ marginLeft: `${level * 16}px` }}> {/* Use inline style for margin */}
         <div 
           className="flex items-center cursor-pointer hover:bg-gray-700 p-2 rounded"
           onClick={() => toggleNode(node.id)}
@@ -113,7 +113,7 @@ const GodownHierarchy: React.FC<GodownHierarchyProps> = ({ onItemSelect }) => {
               <button 
                 key={item.item_id} 
                 className={`ml-8 flex items-center p-2 hover:bg-gray-700 rounded ${selectedItem?.item_id === item.item_id ? 'bg-gray-600' : ''}`}
-                onClick={() => handleItemClick(item)} // Call the item click handler
+                onClick={() => handleItemClick(item)}
               >
                 <Package size={14} className="text-gray-400 mr-2" />
                 <div className="flex flex-col text-left">
@@ -128,7 +128,7 @@ const GodownHierarchy: React.FC<GodownHierarchyProps> = ({ onItemSelect }) => {
         )}
       </div>
     );
-  };
+  };  
 
   return (
     <div className="text-white overflow-y-auto max-h-[calc(100vh-200px)] p-4">
