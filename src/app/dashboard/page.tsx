@@ -45,7 +45,7 @@ export default function ProfilePage() {
   };
 
   const router = useRouter();
-  const [data, setData] = useState("nothing");
+  const [data, setData] = useState({username: ""});
 
   const getUserDetails = async () => {
     try {

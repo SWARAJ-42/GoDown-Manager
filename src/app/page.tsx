@@ -5,7 +5,7 @@ import Link from 'next/link'
 function Home() {
   return (
     <div className='h-screen flex flex-col justify-center items-center'>
-      <Navbar />
+      <Navbar loggedIn={false} />
       <div className='text-6xl font-extrabold text-white m-10'>
         Godown-Manager  
       </div>

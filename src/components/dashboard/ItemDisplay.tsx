@@ -50,7 +50,7 @@ export function ItemDisplay({ item = null }: { item: Item | null }) {
               <Badge variant="secondary">{item.category}</Badge>
               <Badge variant="outline">{item.brand}</Badge>
               <Badge
-                variant={item.status === "In Stock" ? "success" : "destructive"}
+                variant={item.status === "In Stock" ? "default" : "destructive"}
                 // className={`${item.status === "In Stock" ? "bg-green" : "bg-red"}`}
               >
                 {item.status}
