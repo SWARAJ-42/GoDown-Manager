@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Navbar } from "@/components/navbar"
+import Link from "next/link"
 import toast from 'react-hot-toast'
 
 export default function Signup() {
@@ -44,8 +45,8 @@ export default function Signup() {
   }
 
   return (
-    <div className="flex min-h-screen bg-conic-dark-gray">
-      <Navbar />
+    <div className="flex min-h-screen m-4">
+      <Navbar loggedIn={false} />
       <div className="m-auto bg-gray-100/20 backdrop-blur-md shadow-2xl min-h-[600px] flex flex-col justify-center flex-1 px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24 rounded-2xl">
         <div className="w-full max-w-sm mx-auto lg:w-96">
           <div>
@@ -104,6 +105,10 @@ export default function Signup() {
                   >
                     {loading ? "Signing up..." : "Sign up"}
                   </Button>
+                </div>
+
+                <div className="flex mx-auto font-semibold">
+                  <p>Already have an account ? </p><Link className="text-blue-800 mx-2" href="/login">Login</Link>
                 </div>
               </form>
             </div>
