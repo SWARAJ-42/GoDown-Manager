@@ -207,7 +207,7 @@ The project uses both **JSON files** and **MongoDB** for data storage.
 
 ## 📅 Deadline
 
-The final submission deadline for this project is 12/10/2024.
+The final submission deadline for this project is 15/10/2024.
 
 ## 👨‍💻 Developers
 
