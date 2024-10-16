@@ -29,6 +29,7 @@ Check out the demonstration of the project in the following video link:
   - [x] Signup, login and logout
   - [x] Simple search logic
   - [ ] AI based advanced search
+  - [ ] Error Handling (required to find all edge cases)
 - [x] **Authentication:**
   - [x] Login page with JWT Auth.
 - [x] **Dockerization:**
