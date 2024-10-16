@@ -26,12 +26,11 @@ Check out the demonstration of the project in the following video link:
   - [x] Responsiveness of the whole website
   - [ ] Drag and drop feature
 - [x] **Backend:**
-  - [x] REST API to expose endpoints for godowns and items.
-  - [x] JSON structure for godown locations and items.
-  - [x] API documentation included.
+  - [x] Signup, login and logout
+  - [x] Simple search logic
   - [ ] AI based advanced search
 - [x] **Authentication:**
-  - [x] Basic login page with JWT Auth.
+  - [x] Login page with JWT Auth.
 - [x] **Dockerization:**
   - [x] Full Docker setup to containerize the application.
 - [x] **Deployment:**
